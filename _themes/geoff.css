@@ -1,0 +1,115 @@
+@import url(http://fonts.googleapis.com/css?family=Limelight);
+
+/****************************Geoff for my friend Geoff****************************/
+
+.geoff {
+	width: 95%;
+	height: 80%;
+	font-size: 16px;
+	padding: 0;
+	margin: 0 auto;
+	display: block;
+	display: none;
+	background:rgb(255,255,255);
+	border: 1px solid rgb(0,0,0);
+	box-shadow: 0 0 20px -5px rgb(0,0,0);
+	border-radius: 5px;
+	z-index: 20;
+	position: fixed;
+	top: 2em;
+	left: 0;
+	right: 0;
+	-webkit-transition: opacity .5s ease-in;
+	overflow: hidden;
+}
+
+.geoff h1, .geoff h2, .geoff h3, .geoff h4, .geoff p, .geoff a, .geoff span {
+	font-family: 'Limelight', helvetica;
+	font-weight: 400;
+} 
+
+.geoff a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.geoffTop {
+	background: rgb(100,100,100);
+	background: url("https://i.imgur.com/b9pc9Rg.jpg");
+	background-size: 100%;
+	background-position-y: 200px;
+	position: absolute;
+	z-index: 10;
+	margin-bottom: 20px;
+	left:0;
+	right:0;
+	top: 0;
+	display: block;
+	color: rgb(255,255,255);
+	border-bottom: 1px solid rgb(0,0,0);
+}
+
+
+.geoffTop h3 {
+	font-size: 2em;
+	width: 80%;
+	padding: 5px 0 15px 5px;
+	color: rgb(255,255,255);
+	margin: 0;
+}
+
+.geoffTop span {
+	float: right;
+	background: rgb(0,0,0);
+	position: relative;
+	z-index: 10;
+	z-index: 5;
+	padding: 5px;
+}
+
+.geoffTop span a {
+	float:right;
+	font-size: 1em;
+	content: "";
+	margin-left: 5px;
+	padding: 6px;
+	border: 1px solid rgb(255,255,255);
+	background: rgb(180,180,180);
+	color: rgb(255,255,255);
+}
+
+.geoffTop span a:hover{
+	background:rgb(255,255,0);
+	color: rgb(0,0,0);
+}
+
+.geoffContent {
+	padding: 2.9em 5px 1em 5px;
+	height: 90%;
+	overflow-y: scroll;
+}
+
+.geoffContent::after {
+	content: " ";
+	/* display: block; */
+	background: rgb(100,100,100);
+	background:url("https://i.imgur.com/tCgzrbo.jpg");
+	width: 100%;
+	height: 2em;
+	position:absolute;
+	z-index: 200;
+	bottom: 0;
+}
+
+.geoffContent h2 {
+	font-size: 2em;
+	display: inline-block;
+	margin: 10px 0;
+	padding: 5px;
+	border-bottom: 2px solid rgb(0,0,0);
+}
+
+.geoffContent p {
+	display: block;
+	padding: 5px;
+}
