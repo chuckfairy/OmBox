@@ -64,8 +64,8 @@ var NewOmBox = new OmBox("om", {
 Current Themes
 =====
 
-OmDefault
-wannaBe
-geoff
-darkHorse
-lonestar
+* OmDefault
+* wannaBe
+* geoff
+* darkHorse
+* lonestar
