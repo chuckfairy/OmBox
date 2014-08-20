@@ -8,6 +8,8 @@ Quick start guide
 Include Js file
 Create Span or div with an id of your choice
 Create OmBox Object with your customizations or relay on defaults.
+
+```html
 <span id="om">
 	<div>Hello World</div>
 </span>
@@ -21,6 +23,7 @@ var NewOmBox = new OmBox("om", {
 	showDefault: true
 });
 </script>
+```
 			
 All Api actions are done to your instances of an OmBox. By default many actions and buttons will be put in place and the theme will be set as the default theme. Configurations are listed in the Config page. Here are some quick snippets to get you started as well.
 
