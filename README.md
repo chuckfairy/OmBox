@@ -57,6 +57,7 @@ var NewOmBox = new OmBox("om", {
   //View
   top: 20,
   overlay: false,
+  showDefault: false
 });
 ```
 
