@@ -27,16 +27,19 @@ var NewOmBox = new OmBox("om", {
 			
 All Api actions are done to your instances of an OmBox. By default many actions and buttons will be put in place and the theme will be set as the default theme. Configurations are listed in the Config page. Here are some quick snippets to get you started as well.
 
+```html
 NewOmBox.show(); //show instance of ombox
 NewOmBox.close(); //close
 
 NewOmBox.setTheme("wannaBe"); //Set to another theme (best if done in the config)
+```
 
 Configuration and customization
 =====
 
 Configs are done when setting the OmBox. Below is every configuration currently on OmBox. These are also the default values.
 
+```html
 var NewOmBox = new OmBox("om", {
   //Appearence
   theme: "OmDefault",
@@ -55,6 +58,7 @@ var NewOmBox = new OmBox("om", {
   top: 20,
   overlay: false,
 });
+```
 
 Current Themes
 =====
