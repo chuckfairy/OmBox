@@ -68,4 +68,8 @@ Current Themes
 * wannaBe
 * geoff
 * darkHorse
+<<<<<<< HEAD
 * lonestar
+=======
+* lonestar
+>>>>>>> FETCH_HEAD
