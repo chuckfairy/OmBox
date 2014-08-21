@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>OmBox || a javascript window manager for the web</title>
+<meta name="description" content="OmBox is a general purpose JavaScript window manager. OmBox is resizeable, moveable, closeable, and fullsizeable. OmBox is modeled to be dependency free and easily customizeable with numerous themes.">
+<meta name="keywords" content="javascript window manager">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="_css/os.css">
+<link rel="stylesheet" href="_js/google-code-prettify/prettify.css">
+
+<!--App scripts and OmBox include-->
+<script type="text/javascript" src="_assets/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="_assets/ace/ace.js"></script>
+<script type="text/javascript" src="../OmBox/OmBox.js"></script>
+
+</head>
+
+
+<body onload="prettyPrint()">
+
+<!------------------Background------------------>
+<div id="background"></div>
+
+<span id="OmBoxTitle">
+	<h1>OmBox</h1>
+	<p>js Window Manager</p>
+	<p>Version 1.0.0 <a href="https://i.imgur.com/Eourq.jpg" target="_blank">Flatiron</a></p>
+</span>
+
+
+<!------------------OmBoxes------------------>
+<div id="OmBoxesWrap">
+
+<!--About APP-->
+<span id="aboutOmBox">
+
+	<div class="OmDefaultContent" id="aboutContent">
+		<img src="http://chuckfairy.com/resume/_assets/WaveyMe.jpg" alt="Wavey Charlie">
+		<h2>Created by<hr/><weak>Charles Abeling</weak><br/><a href="http://chuckfairy.com/">chuckfairy.com</a></h2>
+
+		<p>OmBox is a general purpose JavaScript window manager. OmBox is modeled to be customizeable, dependency free, and hackable. Please stay up to date with development through GitHub or subscribing to the OmBox newsletter. Contact me through my site for any questions. OmBox is open-source and will always remain so.</p>
+		
+		<p>To get started click on some of the links on the desktop to learn how to use OmBox in your next project.</p>
+		
+		<h2 style="clear:both;">Credit</h2>
+		
+		<ul>
+			<li><a href="https://naturallyirrational.imgur.com" target="_blank">Geoffry Smith-Woolams</a></li>
+			<li><a href="http://ace.c9.io" target="_blank">Ace Code Editor</a></li>
+			<li><a href="http://www.tinymce.com" target="_blank">TinyMCE</a></li>
+		</ul>
+		
+		<h2>More to come</h2>
+		
+		<ul>
+			<li>Awesome Angular.js integration</li>
+			<li>Loading functions</li>
+			<li>Npm integration</li>
+			<li><a href="mailto:charlieabeling@gmail.com">Suggest something!</a></li>
+		</ul>
+	</div>
+</span>
+
+<!--Documentation APP-->
+<span id="documentation">
+	
+	<div id="docContent" class="wannaBeContent">
+		<span id="docNav">
+			<a href="javascript:;" data="home">Quick Start</a>
+			<a href="javascript:;" data="api">Api</a>
+			<a href="javascript:;" data="themes">Themes</a>
+			<a href="javascript:;" data="code">Code</a>
+			<a href="javascript:;" data="browser">Browser</a>
+		</span>
+		
+		<div data="home">
+			<h2>Quick start guide</h2>
+			
+			<ol>
+				<li>Include Js file (make sure themes is in a _themes directory)</li>
+				<li>Create Span or div with an id of your choice</li>
+				<li>Create OmBox Object with your customizations or relay on defaults.</li>
+			</ol>
+			
+			<pre class="prettyprint lang-html">
+
+&lt;span id='om'&gt;<br/>	&lt;div&gt;Hello World&lt;/div&gt;<br/>&lt;/span&gt;<br/><br/>&lt;script type='text/javascript' src='ombox/ombox.js'&gt;&lt;/script&gt;<br/><br/>&lt;script&gt;<br/>//Your JS OmBox Object<br/>var NewOmBox = new OmBox(&quot;om&quot;, {<br/>	//Show by default<br/>	show: true<br/>});<br/>&lt;/script&gt;
+	
+			</pre>
+			
+			<p>All Api actions are done to your instances of an OmBox. By default many actions and buttons will be put in place and the theme will be set as the default theme. Configurations are listed in the Config page. Here are some quick snippets to get you started as well.</p>
+			
+			<pre class="prettyprint lang-js">NewOmBox.show(); //show instance of ombox<br/>NewOmBox.close(); //close<br/><br/>NewOmBox.setTheme(&quot;wannaBe&quot;); //Set to another theme (best if done in the config)</pre>
+		</div>
+		
+		<div data="api">
+			<h2>Configuration and customization</h2>
+			
+			<p>Configs are done when setting the OmBox. Below is every configuration currently on OmBox. These are also the default values.</p>
+			
+			<pre class="prettyprint lang-js">var NewOmBox = new OmBox(&quot;om&quot;, {<br/>        //Appearence<br/>	theme: &quot;OmDefault&quot;,<br/>	resizeable: true,<br/>	title: &quot;&quot;,<br/>	classOn:  &quot;OmBoxSlideOn&quot;,<br/>	classOff: &quot;OmBoxSlideOff&quot;,<br/>	<br/>	//Buttons<br/>	deleteButton: true,<br/>	fullSize: true,<br/>	outButton: true,<br/>	footer: true,<br/>	<br/>	//View<br/>	top: 20,<br/>	overlay: false,<br/>});<br/><br/></pre>
+			
+			<h2>Class Methods</h2>
+			
+			<p>OmBox also has a number of methods that can make developing dynamic data very easily.</p>
+		
+			<pre class="prettyprint lang-js">NewOmBox.show(); //show instance of ombox<br/>NewOmBox.close(); //close<br/>NewOmBox.clear(); //hide display no animation<br/>NewOmBox.refresh(1000) //Close then open after int miliseconds<br/><br/>NewOmBox.fullSize(); //Toggle fullsize<br/>NewOmBox.moveOut(); //Move content to seperate page<br/><br/><br/>NewOmBox.setTheme(&quot;wannaBe&quot;); //Set to another theme (best if done in the config)<br/><br/>NewOmBox.setData(&quot;Some Text&quot;); //Also works for dom elements<br/>NewOmBox.getData(); //Gets innerHTML of content</pre>
+		
+		
+		</div>		
+		
+		<div data="themes" id="OmBoxThemes">
+		
+			<h2>OmDefault</h2>
+			<img src="_assets/themes/omdefault.jpg">
+			
+			<h2>wannaBe</h2>
+			<img src="_assets/themes/wannaBe.jpg">
+			
+			<h2>geoff</h2>
+			<img src="_assets/themes/geoff.jpg">
+			
+			<h2>darkHorse</h2>
+			<img src="_assets/themes/darkHorse.jpg">
+			
+			<h2>armu</h2>
+			<img src="_assets/themes/armu.jpg">
+		
+			<p><a href="javascript:void(0)" onclick="settingsBox.show();">Click here</a> to try them out in the settings box</a>
+			</p>
+		</div>
+		
+		<div data="code">
+			<div id="OmBoxJs"></div>
+		</div>
+		
+		
+		<div data="browser">
+			<h2>Browser Support</h2>
+			
+			<h3>Moveable and Scaleable</h3>
+			<p>Tested Support for most modern and not so modern browsers Chrome, IE, Firefox, and Safari for mobile and desktop devices.</p>
+			
+			<h3>Animations</h3>
+			<p>Browsers that support multiple transforms will display CSS3 transitions. Fallback is displaying and hiding boxes.</p>
+			
+		</div>
+
+	</div>
+</span>
+
+<!--Download APP-->
+<span id="download">
+
+	<div class="wannaBeContent" id="downloadContent">
+		<a href="http://chuckfairy.com/OmBox/download/OmBox.min.zip">
+			<p>Minified</p>
+			<span>(Small code, no doc)</span>
+		</a>
+	
+		<a href="http://chuckfairy.com/OmBox/download/OmBox.zip">
+			<p>Developer</p>
+			<span>(Comes with doc and full code)</span>
+		</a>
+	
+		<a href="https://github.com/chuckfairy/OmBox/" target="_blank">
+			<p>Repository</p>
+		</a>
+		
+		<h2>License</h2>
+		
+		<p>GNU General Public License</p>
+	</div>
+</span>
+
+<!--Settings APP-->
+<span id="settings">
+	
+	<div class="wannaBeContent" id="settingsContent">
+		<h2>Theme
+		
+		<div class="chuckSelect"><a id="themeSelect" href="javascript:;">Select Theme</a>
+			<span>
+				<a href="javascript:;">OmDefault</a>
+				<a href="javascript:;">wannaBe</a>
+				<a href="javascript:;">geoff</a>
+				<a href="javascript:;">darkHorse</a>
+				<a href="javascript:;">armu</a>
+			</span>
+		</div>	
+		</h2>
+
+		<h2>Animation
+			
+		<div class="aniSelect"><a id="animationSelect" href="javascript:;">Select Animation</a>		
+		<span>
+			<a href="javascript:;">OmBoxSlideOn + OmBoxSlideOff</a>
+			<a href="javascript:;">OmBoxSlideUp + OmBoxSlideDown</a>
+			<a href="javascript:;">OmBoxHideOn + OmBoxHideOff</a>
+			<a href="javascript:;">OmBoxOpacityOn + OmBoxOpacityOff</a>
+			<a href="javascript:;">OmBoxExciteOn + OmBoxExciteOff</a>
+			<a href="javascript:;">OmBoxFlipOn + OmBoxFlipOff</a>
+		</span>
+		</div>
+		</h2>
+		
+		<button type="button" id="overlayButton">Overlay</button>
+		<button type="button" id="OmCeption">OmCeption</button>
+			<span>This will crash after 2</span>	
+	</div>
+
+</span>
+
+<!--TINYMCE APP-->
+<span id="tinymceApp">
+	<div class="OmDefaultContent">
+		<textarea id="tinymceArea"></textarea>
+	</div>
+</span>
+
+<span id="aceApp">
+	<div class="OmDefaultContent">
+		<div class="split">
+			<select id="aceMode" size="1">
+			<option selected="true">Select Code Mode</option>
+        <option value="abap">ABAP</option><option value="actionscript">ActionScript</option><option value="ada">ADA</option><option value="apache_conf">Apache Conf</option><option value="asciidoc">AsciiDoc</option><option value="assembly_x86">Assembly x86</option><option value="autohotkey">AutoHotKey</option><option value="batchfile">BatchFile</option><option value="c9search">C9Search</option><option value="c_cpp">C/C++</option><option value="cirru">Cirru</option><option value="clojure">Clojure</option><option value="cobol">Cobol</option><option value="coffee">CoffeeScript</option><option value="coldfusion">ColdFusion</option><option value="csharp">C#</option><option value="css">CSS</option><option value="curly">Curly</option><option value="d">D</option><option value="dart">Dart</option><option value="diff">Diff</option><option value="dockerfile">Dockerfile</option><option value="dot">Dot</option><option value="erlang">Erlang</option><option value="ejs">EJS</option><option value="forth">Forth</option><option value="ftl">FreeMarker</option><option value="gherkin">Gherkin</option><option value="gitignore">Gitignore</option><option value="glsl">Glsl</option><option value="golang">Go</option><option value="groovy">Groovy</option><option value="haml">HAML</option><option value="handlebars">Handlebars</option><option value="haskell">Haskell</option><option value="haxe">haXe</option><option value="html">HTML</option><option value="html_ruby">HTML (Ruby)</option><option value="ini">INI</option><option value="jack">Jack</option><option value="jade">Jade</option><option value="java">Java</option><option value="javascript">JavaScript</option><option value="json">JSON</option><option value="jsoniq">JSONiq</option><option value="jsp">JSP</option><option value="jsx">JSX</option><option value="julia">Julia</option><option value="latex">LaTeX</option><option value="less">LESS</option><option value="liquid">Liquid</option><option value="lisp">Lisp</option><option value="livescript">LiveScript</option><option value="logiql">LogiQL</option><option value="lsl">LSL</option><option value="lua">Lua</option><option value="luapage">LuaPage</option><option value="lucene">Lucene</option><option value="makefile">Makefile</option><option value="matlab">MATLAB</option><option value="markdown">Markdown</option><option value="mel">MEL</option><option value="mysql">MySQL</option><option value="mushcode">MUSHCode</option><option value="nix">Nix</option><option value="objectivec">Objective-C</option><option value="ocaml">OCaml</option><option value="pascal">Pascal</option><option value="perl">Perl</option><option value="pgsql">pgSQL</option><option value="php">PHP</option><option value="powershell">Powershell</option><option value="prolog">Prolog</option><option value="properties">Properties</option><option value="protobuf">Protobuf</option><option value="python">Python</option><option value="r">R</option><option value="rdoc">RDoc</option><option value="rhtml">RHTML</option><option value="ruby">Ruby</option><option value="rust">Rust</option><option value="sass">SASS</option><option value="scad">SCAD</option><option value="scala">Scala</option><option value="smarty">Smarty</option><option value="scheme">Scheme</option><option value="scss">SCSS</option><option value="sh">SH</option><option value="sjs">SJS</option><option value="space">Space</option><option value="snippets">snippets</option><option value="soy_template">Soy Template</option><option value="sql">SQL</option><option value="stylus">Stylus</option><option value="svg">SVG</option><option value="tcl">Tcl</option><option value="tex">Tex</option><option value="text">Text</option><option value="textile">Textile</option><option value="toml">Toml</option><option value="twig">Twig</option><option value="typescript">Typescript</option><option value="vala">Vala</option><option value="vbscript">VBScript</option><option value="velocity">Velocity</option><option value="verilog">Verilog</option><option value="xml">XML</option><option value="xquery">XQuery</option><option value="yaml">YAML</option></select>
+		</div>
+		
+		<div class="split">
+			<select id="aceTheme" size="1"><option selected="true">Select Theme</option>
+          
+			<optgroup label="Bright"><option value="ace/theme/chrome">Chrome</option><option value="ace/theme/clouds">Clouds</option><option value="ace/theme/crimson_editor">Crimson Editor</option><option value="ace/theme/dawn">Dawn</option><option value="ace/theme/dreamweaver">Dreamweaver</option><option value="ace/theme/eclipse">Eclipse</option><option value="ace/theme/github">GitHub</option><option value="ace/theme/solarized_light">Solarized Light</option><option value="ace/theme/textmate">TextMate</option><option value="ace/theme/tomorrow">Tomorrow</option><option value="ace/theme/xcode">XCode</option><option value="ace/theme/kuroir">Kuroir</option><option value="ace/theme/katzenmilch">KatzenMilch</option></optgroup><optgroup label="Dark"><option value="ace/theme/ambiance">Ambiance</option><option value="ace/theme/chaos">Chaos</option><option value="ace/theme/clouds_midnight">Clouds Midnight</option><option value="ace/theme/cobalt">Cobalt</option><option value="ace/theme/idle_fingers">idle Fingers</option><option value="ace/theme/kr_theme">krTheme</option><option value="ace/theme/merbivore">Merbivore</option><option value="ace/theme/merbivore_soft">Merbivore Soft</option><option value="ace/theme/mono_industrial">Mono Industrial</option><option value="ace/theme/monokai">Monokai</option><option value="ace/theme/pastel_on_dark">Pastel on dark</option><option value="ace/theme/solarized_dark">Solarized Dark</option><option value="ace/theme/terminal">Terminal</option><option value="ace/theme/tomorrow_night">Tomorrow Night</option><option value="ace/theme/tomorrow_night_blue">Tomorrow Night Blue</option><option value="ace/theme/tomorrow_night_bright">Tomorrow Night Bright</option><option value="ace/theme/tomorrow_night_eighties">Tomorrow Night 80s</option><option value="ace/theme/twilight">Twilight</option><option value="ace/theme/vibrant_ink">Vibrant Ink</option></optgroup></select>
+		
+		</div>
+		
+		<div id="aceTextarea"></div>
+	</div>
+</span>
+
+</div>
+
+<!------------------Application Buttons------------------>
+<div class="applications" id="applicationsLoad">
+	<a href="javascript:;" onclick="aboutOmBox.show()">
+		<img src="_assets/about.png" alt="About OmBox">
+		About
+	</a>
+	
+	<a href="javascript:;" onclick="docBox.show()">
+		<img src="_assets/book.png">
+		Doc
+	</a>
+	
+	<a href="javascript:;" onclick="downloadBox.show()">
+		<img src="_assets/download.png">
+		Download
+	</a>
+	
+	<a href="javascript:;" onclick="settingsBox.show()">
+		<img src="_assets/gear.png">
+		Settings
+	</a>
+	
+	<a href="javascript:;" onclick="tinymceBox.show()">
+		<img src="_assets/tinymce_logo.png">
+		Tiny MCE
+	</a>
+	
+	<a href="javascript:;" onclick="aceBox.show()">
+		<img src="_assets/ace_logo.png">
+		Ace
+	</a>
+	
+	<a target="_blank" href="https://github.com/chuckfairy/OmBox/">
+		<img src="_assets/github_logo.png">
+		GitHub
+	</a>
+	
+</div>
+
+<script src="_js/google-code-prettify/prettify.js" type="text/javascript"></script>
+<script type="text/javascript" src="_js/os.js"></script>
+</body>
+</html>

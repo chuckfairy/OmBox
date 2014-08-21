@@ -1,0 +1,138 @@
+.darkHorse {
+
+	height: 80%;
+	font-size: 16px;
+	padding: 3.6em 0 0 0;
+	margin: 0 auto;
+	background:rgb(0,0,0);
+	background: rgba(0,0,0,.5);
+	max-height: 100%;
+	width: 80%;
+	border-radius: 0;
+	z-index: 20;
+	position: absolute;
+	left: 0;
+	right: 0;
+	
+	-webkit-transition: transform .6s ease-out, opacity .4s ease-in;
+	-moz-transition: transform .6s ease-out, opacity .4s ease-in;
+	-ms-transition: transform .6s ease-out, opacity .4s ease-in;
+	overflow: hidden;
+}
+
+.darkHorse a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.darkHorseTop {
+
+	height: 3.6em;
+	background-size: cover;
+	position: absolute;
+	z-index: 10;
+	border-radius: 8px 8px 0 0;
+	margin-bottom: 20px;
+	box-shadow: 0 10px 25px -7px rgb(0,0,0);
+	left:0;
+	right:0;
+	top: 0;
+	display: block;
+	color: rgb(255,255,255);
+}
+
+
+.darkHorseTop h3 {
+	font-size: 1.8em;
+	text-align: left;
+	width: 100%;
+	padding: 5px 0 15px 5px;
+	color: rgb(255,255,255);
+	margin: 0;
+}
+
+.darkHorseTop > span {
+	top: 5px;
+	right: 5px;
+	position: absolute;
+	z-index: 5;
+	padding: 5px;
+	background: rgb(40,40,40);
+	border: 2px solid rgb(255,255,255);
+}
+
+.darkHorseTop span a {
+	float:right;
+	font-size: 1em;
+	margin: 0 0 2px 5px;
+	padding: 10px;
+	border-left: 4px solid rgb(180,180,180);
+	color: rgb(200,200,200);
+	-webkit-transition: all .5s ease-out;
+	z-index: 5;
+	display: block;
+}
+
+.darkHorseTop span a h3 {z-index: -1; color: rgb(255,255,255);}
+
+.darkHorseTop span a:hover{
+	background:rgb(0,0,0);
+	color: rgb(255,255,255);
+}
+
+.darkHorseX {
+	background: rgb(255,0,0);
+	content: 'x';
+}
+
+
+.darkHorseOut {
+	background: rgb(255,255,0);
+	content: '[^]';
+}
+
+.darkHorseFull {
+	background: rgb(0,255,0);
+	content: '+';
+}
+
+.darkHorseFooter {
+	height: 1em;
+	width: 100%;
+	position: absolute;
+	background: rgb(0,0,50);
+	bottom: 0;
+	z-index: 10;
+	border-top: 3px solid rgb(180,180,180);
+}
+
+.darkHorseHandle {
+	float: right;
+	content: "";
+	position: relative;
+	border-style: solid;
+	border-color: rgb(255,255,255) rgb(200,200,200)  transparent transparent;
+	border-width: 1em;
+	right: 10px;
+}
+
+.darkHorseContent {
+	padding: 0 5px 1.2em 5px;
+	height: 94%;
+	background: rgb(40,40,40);
+	color: rgb(255,255,255);
+	overflow-y: scroll;
+}
+
+.darkHorseContent h2 {
+	font-size: 2em;
+	display: inline-block;
+	margin: 0 0 10px 0;
+	padding: 5px;
+	border-bottom: 2px solid rgb(0,0,0);
+}
+
+.darkHorseContent p {
+	display: block;
+	padding: 5px;
+}

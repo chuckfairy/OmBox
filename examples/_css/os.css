@@ -1,0 +1,296 @@
+html {font-size: 16px;}
+
+body, html {
+	padding:0;
+	margin:0;
+	overflow: hidden;
+}
+
+body {
+	background-clip: border-box;
+	background-size: 150%;	
+	height: 100%;
+	width: 100%;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+select:focus, textarea:focus {
+	outline: none;
+}
+
+h1, h2, h3, h4, p, a {
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+span {font-family: monospace;}
+
+img {border: none;}
+
+pre {
+	background: rgb(220,220,220);	
+	overflow-x: scroll;
+	border: 1px solid rgb(0,0,0);
+}
+
+.opacityOn {display:block;}
+.opacityOff {display: none;}
+
+#OmBoxTitle {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-align: right;
+	
+}
+
+#OmBoxTitle > h1 {
+	font-size: 3em;
+	margin: 0 0 5px 0;
+	padding: 2px;
+	border-bottom: 1px solid rgb(0,0,0);
+}
+
+
+#OmBoxTitle p {
+	margin: 0;
+	font-style: italic;
+	color: rgb(40,40,40);
+	font-size: 1.2em;
+	
+}
+
+
+/****************************Screen desktop****************************/
+#background {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: -1;
+	background: url("../_assets/background.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.applications {
+	width: 8em;
+	max-width: 25%;
+	padding: 5px;
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+
+.applications > a {
+	padding: 5px;
+	display: block;
+	padding: 10px;
+	text-align: center;
+	color: rgb(0,0,0);
+	text-shadow: 
+		1px 1px 0 rgb(40,40,40), 2px 2px 0 rgb(80,80,80), 
+		3px 3px 0 rgb(120,120,120),
+		2px 2px 10px rgb(255,255,255);
+	font-size: 1.2em;
+	text-decoration: none;
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out;
+	-ms-transition: all .5s ease-out;
+}
+
+.applications > a:hover {
+	-webkit-transform: scale(1.2);	
+	-moz-transform: scale(1.2);	
+	-ms-transform: scale(1.2);	
+}
+
+.applications img {
+	display: block;
+	margin: 0 auto;
+	width: 4em;
+}
+
+
+/****************************About****************************/
+#aboutContent {
+	padding: 5px;
+}
+
+#aboutContent img {
+	width: 20em;
+	float: left;
+	padding: 5px;
+}
+
+#aboutContent a {
+	color: rgb(50,50,255);
+}
+
+#aceTextarea {
+	height: 104%;
+	width: 100%;
+}
+
+
+/****************************Download****************************/
+#downloadContent > a {
+	display: block;
+	width: 80%;
+	margin: 10px auto;
+	max-width: 80em;
+	padding: 5px;
+	background: rgb(50,50,255);
+	color: rgb(255,255,255);
+	text-align: center;	
+	-webkit-transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;
+	-ms-transition: all .5s ease-in;
+}
+
+#downloadContent > a:hover {
+	background: rgb(255,50,255);
+}
+
+#downloadContent > a p {
+	font-size: 1.8em;
+	margin:0;
+	padding: 10px;
+}
+#downloadContent > a span {font-size: 1em; color: rgb(200,200,200);}
+
+
+/****************************Settings****************************/
+#settingsContent button {
+	padding: 5px;
+	display: block;
+	border: none;
+	border-top: 4px solid rgb(180,180,180);
+	border-radius: 0;
+	background: rgb(50,50,255);
+	font-size: 1em;
+	color: rgb(255,255,255);
+	font-size: 1.8em;
+	margin-bottom: 10px;
+}
+
+#settingsContent button:focus {outline: none;}
+
+#settingsContent h2 {
+	display: block;
+}
+
+
+/****************************Documentation****************************/
+#docContent > div {
+	padding-left: 6em;
+}
+
+#docNav {
+	display: inline;
+	position: absolute;
+	left:0;
+	width: 6em;
+	height: 100%;
+	background: rgb(255,255,200);
+	box-shadow: 5px 0 15px -5px rgb(0,0,0);
+}
+
+#docNav a {
+	display: block;
+	padding: 5px;
+	font-size: 1em;
+	color: rgb(0,0,0);
+}
+
+#docNav a:hover, #docNav .selected {background: rgb(50,50,255);color: rgb(255,255,255);}
+
+#OmBoxJs {height: 70em;}
+
+#OmBoxThemes img {
+	display: block;
+	margin: 0 auto 10px auto;
+	width: 100%;
+	max-width: 600px;
+	padding-bottom: 5px;
+}
+
+/****************************Select****************************/
+.chuckSelect, aniSelect {
+	font-size: .9em;
+	position: relative;
+	display: block;
+	
+}
+
+.chuckSelect span, .aniSelect span  {
+	display: block;
+	clear:both;
+	box-shadow: 0 0 17px -5px rgb(0,0,0);
+	z-index: 20;
+}
+
+.chuckSelect a, .aniSelect a {
+	display: block;
+	position: relative;
+	top: 1px;
+	padding: 5px;
+	color: rgb(0,0,0);
+	background: rgba(220,220,220,.7);
+	border-bottom: 1px solid rgb(180,180,180);
+}
+
+.chuckSelect a:nth-of-type(2n), .aniSelect a:nth-of-type(2n)
+{background:  rgba(255,255,255,.7)}
+
+.chuckSelect a:hover, .aniSelect a:hover {
+	background: rgb(50,50,255);
+	color: rgb(255,255,255);
+}
+
+
+/****************************Ace App****************************/
+#aceApp select {
+	border-radius: 0;
+	display:block;
+	margin: 5px 0 5px 5px;
+	font-size: 1em;
+	background: rgb(220,220,220);
+	border: 1px solid rgb(0,0,0);
+}
+
+/****************************Bottom****************************/
+#bottombar {
+	width: 100%;
+	bottom:0;
+	position: absolute;
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,.8);
+	height: 2.1em;
+	padding: 3px;
+	z-index: 1000;
+}
+
+#bottombar a {
+	font-size: 1.1em;
+	padding: 2px;
+	background: rgb(220,220,220);
+	border: groove 3px rgb(180,180,180);
+	display: inline-block;
+	text-decoration: none;
+}
+
+#bottombar a:hover {
+	background: rgb(180,180,180);
+}
+
+#bottombar a > img {
+	width: 1.2em;
+	float: left;
+}

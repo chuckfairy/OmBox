@@ -1,0 +1,161 @@
+/*Wanna be theme by chuck fairy*/
+.wannaBe {
+
+	height: 80%;
+	font-size: 16px;
+	padding: 3.6em 0 0 0;
+	margin: 0 auto;
+	background:rgb(255,255,255);
+	border: 1px solid rgb(0,0,0);
+	max-height: 100%;
+	width: 80%;
+	box-shadow: 0 0 40px -5px rgb(0,0,0);
+	border-radius: 10px;
+	z-index: 20;
+	position: absolute;
+	left: 0;
+	right: 0;
+	
+	-webkit-transition: transform .6s ease-out, opacity .4s ease-in;
+	-moz-transition: transform .6s ease-out, opacity .4s ease-in;
+	-ms-transition: transform .6s ease-out, opacity .4s ease-in;
+	overflow: hidden;
+}
+
+.wannaBe a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.wannaBeTop {
+	background: rgb(190,190,190);
+	background: -webkit-linear-gradient(-90deg,
+		rgb(230,230,230) 0%,
+		rgb(190,190,190) 100%
+	);
+	height: 3.6em;
+	background-size: cover;
+	position: absolute;
+	z-index: 10;
+	border-radius: 8px 8px 0 0;
+	margin-bottom: 20px;
+	left:0;
+	right:0;
+	top: 0;
+	display: block;
+	color: rgb(255,255,255);
+	border-bottom: 1px solid rgb(0,0,0);
+}
+
+
+.wannaBeTop h3 {
+	font-size: 1.3em;
+	text-align: center;
+	width: 100%;
+	padding: 5px 0 15px 5px;
+	color: rgb(0,0,0);
+	margin: 0;
+}
+
+.wannaBeTop span {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	z-index: 10;
+	z-index: 5;
+	padding: 5px;
+}
+
+.wannaBeTop span a {
+	float:left;
+	clear: both;
+	font-size: 1em;
+	content: " ";
+	border-radius: 100%;
+	margin-bottom: 2px;
+	padding: 6px;
+	border: 1px solid rgb(0,0,0);
+	color: rgb(255,255,255);
+	-webkit-transition: all .5s ease-out;
+	z-index: 5;
+	display: block;
+}
+
+.wannaBeTop span a h3 {z-index: -1;}
+
+.wannaBeTop span a:hover{
+	background:rgb(0,0,0);
+	color: rgb(255,255,255);
+	-webkit-transform: scale(1.2);
+}
+
+.wannaBeX {
+	background: rgb(200,0,0);
+	background: -webkit-linear-gradient(45deg, 
+		rgb(180,0,0) 0%,
+		rgb(255,20,20) 100%
+	);
+}
+
+
+.wannaBeOut {
+	background: rgb(255,200,0);
+	background: -webkit-linear-gradient(45deg, 
+		rgb(200,100,0) 0%,
+		rgb(255,217,77) 100%
+	);
+}
+
+.wannaBeFull {
+	background: rgb(0,200,0);
+	background: -webkit-linear-gradient(45deg, 
+		rgb(0,180,0) 0%,
+		rgb(50,255,50) 100%
+	);
+}
+
+.wannaBeFooter {
+	height: 1em;
+	width: 100%;
+	background: rgb(190,190,190);
+	background: -webkit-linear-gradient(-90deg,
+		rgb(230,230,230) 0%,
+		rgb(190,190,190) 100%
+	);
+	position: absolute;
+	bottom: 0;
+	z-index: 10;
+	border-radius: 0 0 10px 10px;
+	border-top: 1px solid rgb(0,0,0);
+}
+
+.wannaBeHandle {
+	float: right;
+	content: "";
+	position: relative;
+	border-style: solid;
+	border-color: rgb(0,0,0) rgb(0,0,0)  transparent transparent;
+	border-width: 1em;
+	right: 10px;
+}
+
+.wannaBeContent {
+	padding: 0 5px 1em 5px;
+	height: 94%;
+	overflow-y: scroll;
+	position: relative;
+	background: rgb(255,255,255);
+}
+
+.wannaBeContent h2 {
+	font-size: 2em;
+	display: block;
+	margin: 0 0 10px 0;
+	padding: 5px;
+	border-bottom: 2px solid rgb(0,0,0);
+}
+
+.wannaBeContent p {
+	display: block;
+	padding: 5px;
+}
