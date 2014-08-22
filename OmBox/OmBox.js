@@ -28,7 +28,10 @@ var OMBOX_DEFAULT = {
 
 function OmBox(boxId, customize) {
 
-	this.window = document.getElementById(boxId);
+	//Grab if it is an object or find by id
+	if(typeof(boxId) === "object") {this.window = boxId;}
+	else {this.window = document.getElementById(boxId);}
+	
 	if(typeof(customize) === "undefined") {customize = OMBOX_DEFAULT;}
 	this.parseCustomize(customize);
     
@@ -72,10 +75,12 @@ OmBox.prototype = {
 	},
 	
     contentInit: function() {
-        this.contents = this.window.getElementsByTagName("div")[0];
-        if(!this.contents) {
+        this.contents = this.window.getElementsByTagName("div");
+        if(!this.contents[0]) {
             this.contents = document.createElement("div");   
             this.window.appendChild(this.contents);
+        } else {
+	        this.contents = this.contents[0];
         }
     },    
     
@@ -335,7 +340,7 @@ OmBox.prototype = {
 		var thisOm = this;
 		var mousePosition = getMouseXY(e);
 		var lastWidth  = thisOm.window.offsetWidth;
-		var lastHeight = thisOm.window.offsetHeight - 30;
+		var lastHeight = thisOm.window.offsetHeight - 45
 		var lastTop    = thisOm.window.offsetTop;
 		
 		var lastPositionX = mousePosition["x"];
@@ -423,7 +428,7 @@ OmBox.prototype.loadTheme = function(theme) {
 			}
 			
 		}
-		
+		//Push theme to used themes
 		OmBoxThemes.push(theme);
 	}
 }

@@ -199,10 +199,8 @@ function simpleselect(thisClass, loadfunction) {
 			t.isOn = 0;
 			selections.style.display = "block";
 			selections.style.zIndex = "5";
-			console.log(isOn);
 			setTimeout(function(){
 				document.onclick = function() {
-					console.log(t.isOn);
 					if(t.isOn) {
 						selections.style.display = "none";
 						selections.style.zIndex = "-5";
